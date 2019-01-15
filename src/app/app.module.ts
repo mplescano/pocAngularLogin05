@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {PartsModule} from './parts/parts.module';
 import {UsersModule} from './users/users.module';
 import { AlertsComponent } from './alerts/alerts.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AlertsComponent } from './alerts/alerts.component';
     BrowserModule,
     AppRoutingModule,
     PartsModule,
-    UsersModule
+    UsersModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
