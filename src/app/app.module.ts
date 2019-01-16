@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import {PartsModule} from './parts/parts.module';
 import {UsersModule} from './users/users.module';
 import { AlertsComponent } from './alerts/alerts.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
+import {FakedBackendInterceptor} from './helpers/faked-backend.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,13 @@ import {ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: FakedBackendInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
