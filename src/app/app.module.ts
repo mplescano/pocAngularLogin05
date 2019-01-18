@@ -9,6 +9,7 @@ import { AlertsComponent } from './alerts/alerts.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FakedBackendInterceptor} from './helpers/faked-backend.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {FakedBackendInterceptor} from './helpers/faked-backend.interceptor';
     PartsModule,
     UsersModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
