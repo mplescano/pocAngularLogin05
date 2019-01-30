@@ -10,6 +10,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FakedBackendInterceptor} from './helpers/faked-backend.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AuthModule} from './auth/auth.module';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    PartsModule,
+    AgGridModule.withComponents([]),
     UsersModule,
+    PartsModule,
+    AuthModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [
     {

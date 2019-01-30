@@ -1,17 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AuthenticationService} from './authentication.service';
 import {UserService} from './user.service';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { AgGridModule } from 'ag-grid-angular';
+import {UsersRoutingModule} from './users-routing.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [UserListComponent, UserFormComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    UsersRoutingModule,
+    AgGridModule.withComponents([])
+  ],
+  declarations: [
+    UserListComponent,
+    UserFormComponent
+  ],
+  exports: [
+    UserListComponent,
+    UserFormComponent
   ],
   providers: [
-    AuthenticationService,
     UserService
   ]
 })

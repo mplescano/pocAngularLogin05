@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {User} from '../../users/User';
 import {Subscription} from 'rxjs';
-import {AuthenticationService} from '../../users/authentication.service';
+import {AuthenticationService} from '../../auth/authentication.service';
 
 @Component({
   selector: 'app-home',
