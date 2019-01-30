@@ -30,3 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://github.com/spring-petclinic/spring-petclinic-angular/tree/master/src/app
 
 https://github.com/cornflourblue/angular-7-registration-login-example/tree/master/src/app
+
+https://www.ag-grid.com/javascript-grid-infinite-scrolling/#pagination
